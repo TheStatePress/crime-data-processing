@@ -105,3 +105,6 @@ venv.bak/
 
 # vscode settings and such
 .vscode/
+
+# mac file thing
+.DS_Store
