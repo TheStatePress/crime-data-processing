@@ -2,10 +2,13 @@
 import csv
 import os
 
+dir = '../0-raw-pdf/'
+
 def cleanHeaders(fileName):
-  file = open('../0-raw-pdf/' + fileName)
+  file = open(dir + fileName)
   data = list(csv.reader(file))
   print(data)
 
-for fileName in os.listdir('../0-raw-pdf/'):
-  print(fileName)
+for i, fileName in enumerate(os.listdir('../0-raw-pdf/')):
+  if i == 0:
+    cleanHeaders(fileName)
